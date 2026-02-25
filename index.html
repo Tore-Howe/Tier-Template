@@ -13,35 +13,81 @@
   </head>
 
   <body>
-    <section id="landing">
-      <nav>
-        <div class="nav__container">
-          <div class="nav__brand">
-            <img
-              class="logo"
-              src="./TREACTASSETS/logo.2c489fc453a1783cbadacf914efa3df6.svg"
-              alt="Treact logo"
-            />
-            <span class="brand__name">Treact</span>
-          </div>
-
-          <div class="nav__right">
-            <ul class="nav__links">
-              <li><a href="#" class="nav__link">About</a></li>
-              <li><a href="#" class="nav__link">Blog</a></li>
-              <li><a href="#" class="nav__link">Pricing</a></li>
-              <li><a href="#" class="nav__link">Contact Us</a></li>
-            </ul>
-
-            <ul class="login__signup">
-              <li><a href="#" class="nav__link">Login</a></li>
-              <li><button class="btn__signup">Sign Up</button></li>
-            </ul>
-          </div>
+    <nav>
+      <div class="nav__container">
+        <div class="nav__brand">
+          <img
+            class="logo"
+            src="./TREACTASSETS/logo.2c489fc453a1783cbadacf914efa3df6.svg"
+            alt="Treact logo"
+          />
+          <span class="brand__name">Treact</span>
         </div>
-      </nav>
-    </section>
-    <header>
+
+        <div class="nav__right">
+          <ul class="nav__links">
+            <li><a href="#" class="nav__link">About</a></li>
+            <li><a href="#" class="nav__link">Blog</a></li>
+            <li><a href="#" class="nav__link">Pricing</a></li>
+            <li><a href="#" class="nav__link">Contact Us</a></li>
+          </ul>
+
+          <ul class="login__signup">
+            <li><a href="#" class="nav__link">Login</a></li>
+            <li><button class="btn__signup">Sign Up</button></li>
+          </ul>
+        </div>
+
+        <button
+          class="nav__hamburger"
+          aria-label="Open menu"
+          onclick="openMenu()"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+
+      <div class="nav__backdrop" onclick="closeMenu()"></div>
+
+      <div class="nav__mobile">
+        <button
+          class="nav__close"
+          aria-label="Close menu"
+          onclick="closeMenu()"
+        >
+          <i class="fas fa-times"></i>
+        </button>
+
+        <ul class="nav__mobile-links">
+          <li>
+            <a href="#" class="nav__mobile-link" onclick="closeMenu()">About</a>
+          </li>
+          <li>
+            <a href="#" class="nav__mobile-link" onclick="closeMenu()">Blog</a>
+          </li>
+          <li>
+            <a href="#" class="nav__mobile-link" onclick="closeMenu()"
+              >Pricing</a
+            >
+          </li>
+          <li>
+            <a href="#" class="nav__mobile-link" onclick="closeMenu()"
+              >Contact Us</a
+            >
+          </li>
+          <li>
+            <a href="#" class="nav__mobile-link" onclick="closeMenu()">Login</a>
+          </li>
+
+          <li>
+            <button class="btn__signup nav__mobile-cta" onclick="closeMenu()">
+              Sign Up
+            </button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <header class="reveal">
       <div class="header__container">
         <div class="header__description">
           <h1>
@@ -80,7 +126,7 @@
         />
       </div>
     </header>
-    <section class="container__features">
+    <section class="container__features reveal">
       <div class="features__header">
         <h3 class="features__title"><span class="purple">FEATURES</span></h3>
         <h1 class="features__heading">
@@ -209,7 +255,7 @@
         </div>
       </div>
     </section>
-    <section class="quality__work">
+    <section class="quality__work reveal">
       <div class="quality__work--header">
         <h3 class="quality__work--title">
           <span class="purple">QUALITY WORK</span>
@@ -229,7 +275,7 @@
         <img src="./TREACTASSETS/hero-screenshot-1.40a097b525c2f8c9808e.png" />
       </figure>
     </section>
-    <section class="steps">
+    <section class="steps reveal">
       <div class="steps__header">
         <h3 class="steps__title"><span class="purple">STEPS</span></h3>
         <h1 class="steps__heading">
@@ -274,7 +320,7 @@
       </figure>
     </section>
 
-    <section class="values">
+    <section class="values reveal">
       <div class="values__left">
         <h3 class="values__title"><span class="purple">VALUES</span></h3>
 
@@ -323,7 +369,7 @@
       </figure>
     </section>
 
-    <section class="pricing">
+    <section class="pricing reveal">
       <div class="pricing__header">
         <h3 class="pricing__title"><span class="purple">PRICING</span></h3>
         <h1 class="pricing__heading">
@@ -384,7 +430,7 @@
         </div>
       </div>
     </section>
-    <section class="testimonials">
+    <section class="testimonials reveal">
       <figure class="testimonials__img">
         <img
           src="./TREACTASSETS/love-illustration.c759090fa833369ad6ffb6eb19cacb3e.svg"
@@ -454,7 +500,7 @@
         </div>
       </div>
     </section>
-    <section class="cta">
+    <section class="cta reveal">
       <div class="cta__card">
         <h2 class="cta__text">
           Developers all over the world are<br />
@@ -467,7 +513,7 @@
         </div>
       </div>
     </section>
-    <footer class="footer">
+    <footer class="footer reveal">
       <div class="footer__inner">
         <div class="footer__links">
           <div class="footer__col">
@@ -522,7 +568,8 @@
               />
             </span>
             <span class="footer__brand-name">Treact Inc.</span>
-          </div>6
+          </div>
+          6
 
           <p class="footer__copyright">
             © 2018 Treact Inc. All Rights Reserved.
@@ -544,5 +591,6 @@
         </div>
       </div>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>
